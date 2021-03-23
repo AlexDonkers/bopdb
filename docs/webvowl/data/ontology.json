@@ -1,0 +1,695 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://alexdonkers.github.io/bopdb" ],
+    "title" : {
+      "en" : "BOP Database Ontology"
+    },
+    "iri" : "http://alexdonkers.github.io/bopdb",
+    "version" : "0.1",
+    "author" : [ "https://orcid.org/0000-0002-8809-3277" ],
+    "description" : {
+      "en" : "This ontology is an extension of the Building Performance Ontology (BOP). It describes detailed database information. The ontology helps to create database alignment modules and enables the description of database schemas, retention policies and data formats."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-8809-3277",
+        "type" : "iri"
+      } ],
+      "preferredNameSpaceUri" : [ {
+        "identifier" : "preferredNameSpaceUri",
+        "language" : "undefined",
+        "value" : "http://alexdonkers.github.io/bopdb#",
+        "type" : "iri"
+      } ],
+      "preferredNameSpacePrefix" : [ {
+        "identifier" : "preferredNameSpacePrefix",
+        "language" : "undefined",
+        "value" : "bopdb",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "BOP Database Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://alexdonkers.github.io/bopdb/ShardDurationClause",
+    "baseIri" : "http://alexdonkers.github.io/bopdb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ShardDurationClause",
+      "en" : "Shard duration clause"
+    },
+    "comment" : {
+      "en" : "The shard duration determines how much time each shard group spans."
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://alexdonkers.github.io/bopdb/RetentionPolicy",
+    "baseIri" : "http://alexdonkers.github.io/bopdb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RetentionPolicy",
+      "en" : "Retention policy"
+    },
+    "subClasses" : [ "6" ],
+    "comment" : {
+      "en" : "Describes how long InfluxDB keeps data (duration), how many copies of the data to store in the cluster (replication factor), and the time range covered by shard groups (shard group duration). RPs are unique per database and along with the measurement and tag set define a series.\n\nWhen you create a database, InfluxDB creates a retention policy called autogen with an infinite duration, a replication factor set to one, and a shard group duration set to seven days."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/RFC3339",
+    "baseIri" : "https://w3id.org",
+    "instances" : 0,
+    "annotations" : {
+      "alternative" : [ {
+        "identifier" : "alternative",
+        "language" : "en",
+        "value" : "YYYY-MM-DDThh:mm:ss.ssZ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RFC3339",
+      "en" : "RFC3339 timestamp"
+    },
+    "comment" : {
+      "en" : "A timestamp that uses the human readable DateTime format proposed in RFC 3339 (for example: 2020-01-01T00:00:00.00Z). Flux and InfluxDB clients return query results with RFC3339 timestamps."
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://alexdonkers.github.io/bopdb/Clause",
+    "baseIri" : "http://alexdonkers.github.io/bopdb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Clause",
+      "en" : "Clause"
+    },
+    "subClasses" : [ "1", "4", "12" ],
+    "comment" : {
+      "en" : "An attribute of the retention policy that specifies information on how data in the database is stored."
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://alexdonkers.github.io/bopdb/FieldKey",
+    "baseIri" : "http://alexdonkers.github.io/bopdb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FieldKey",
+      "en" : "Field key"
+    },
+    "comment" : {
+      "en" : "The key of the key-value pair. Field keys are strings and they store metadata."
+    },
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/Unix-s",
+    "baseIri" : "https://w3id.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Unix-s",
+      "en" : "Unix second epoch timestamp"
+    },
+    "comment" : {
+      "en" : "Counts time since Unix Epoch (1970-01-01T00:00:00Z UTC) in specified units (seconds)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "18",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://alexdonkers.github.io/bopdb/DefaultRetentionPolicy",
+    "baseIri" : "http://alexdonkers.github.io/bopdb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DefaultRetentionPolicy",
+      "en" : "Default retention policy"
+    },
+    "comment" : {
+      "en" : "Default retention policy of the database."
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://alexdonkers.github.io/bopdb/DurationClause",
+    "baseIri" : "http://alexdonkers.github.io/bopdb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DurationClause",
+      "en" : "Duration clause"
+    },
+    "comment" : {
+      "en" : "The attribute of the retention policy that determines how long InfluxDB stores data. Data older than the duration are automatically dropped from the database."
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://alexdonkers.github.io/bopdb/ReplicationClause",
+    "baseIri" : "http://alexdonkers.github.io/bopdb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReplicationClause",
+      "en" : "Replication clause"
+    },
+    "comment" : {
+      "en" : "The attribute of the retention policy that determines how many copies of data to concurrently store (or retain) in the cluster. Replicating copies ensures that data is available when a data node (or more) is unavailable."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/Unix-us",
+    "baseIri" : "https://w3id.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Unix-us",
+      "en" : "Unix microsecond epoch timestamp"
+    },
+    "comment" : {
+      "en" : "Counts time since Unix Epoch (1970-01-01T00:00:00Z UTC) in specified units (microseconds)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "33",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://alexdonkers.github.io/bopdb/DateFormat",
+    "baseIri" : "http://alexdonkers.github.io/bopdb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DateFormat",
+      "en" : "Date format"
+    },
+    "subClasses" : [ "10", "33", "18", "36", "38" ],
+    "comment" : {
+      "en" : "The format of the data and time associated with a point."
+    },
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/Unix-ms",
+    "baseIri" : "https://w3id.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Unix-ms",
+      "en" : "Unix millisecond epoch timestamp"
+    },
+    "comment" : {
+      "en" : "Counts time since Unix Epoch (1970-01-01T00:00:00Z UTC) in specified units (milliseconds)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "36",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://alexdonkers.github.io/bopdb/TagKey",
+    "baseIri" : "http://alexdonkers.github.io/bopdb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TagKey",
+      "en" : "Tag key"
+    },
+    "comment" : {
+      "en" : "The key of a tag key-value pair. Tag keys are strings and store metadata. Tag keys are indexed so queries on tag keys are processed quickly."
+    },
+    "attributes" : [ "external" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/Property",
+    "baseIri" : "https://w3id.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Property"
+    },
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/Database",
+    "baseIri" : "https://w3id.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Database"
+    },
+    "attributes" : [ "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/Unix-ns",
+    "baseIri" : "https://w3id.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Unix-ns",
+      "en" : "Unix nanosecond epoch timestamp"
+    },
+    "comment" : {
+      "en" : "Counts time since Unix Epoch (1970-01-01T00:00:00Z UTC) in specified units (nanoseconds)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "38",
+    "superClasses" : [ "11" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/isReplicationClauseOf",
+    "baseIri" : "https://w3id.org",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "isReplicationClauseOf",
+      "en" : "is replication clause of"
+    },
+    "superproperty" : [ "3" ],
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/refersToProperty",
+    "baseIri" : "https://w3id.org",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "refersToProperty",
+      "en" : "refers to property"
+    },
+    "domain" : "8",
+    "attributes" : [ "object", "functional", "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/isClauseOf",
+    "baseIri" : "https://w3id.org",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "isClauseOf",
+      "en" : "is clause of"
+    },
+    "domain" : "5",
+    "subproperty" : [ "0", "13", "14" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/isRetentionPolicyOf",
+    "baseIri" : "https://w3id.org",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "isRetentionPolicyOf",
+      "en" : "is retention policy of"
+    },
+    "domain" : "2",
+    "subproperty" : [ "17" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/hasRetentionPolicy",
+    "inverse" : "15",
+    "baseIri" : "https://w3id.org",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasRetentionPolicy",
+      "en" : "has retention policy"
+    },
+    "domain" : "16",
+    "subproperty" : [ "20" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/isDurationClauseOf",
+    "baseIri" : "https://w3id.org",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "isDurationClauseOf",
+      "en" : "is duration clause of"
+    },
+    "superproperty" : [ "3" ],
+    "domain" : "12",
+    "attributes" : [ "object", "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/isTagKeyOf",
+    "baseIri" : "https://w3id.org",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "isTagKeyOf",
+      "en" : "is tag key of"
+    },
+    "domain" : "22",
+    "attributes" : [ "object", "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/hasClause",
+    "inverse" : "3",
+    "baseIri" : "https://w3id.org",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasClause",
+      "en" : "has clause"
+    },
+    "domain" : "2",
+    "subproperty" : [ "24", "25", "26" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/hasDateFormat",
+    "inverse" : "28",
+    "baseIri" : "https://w3id.org",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasDateFormat",
+      "en" : "has date format"
+    },
+    "domain" : "16",
+    "attributes" : [ "object", "functional", "external" ],
+    "id" : "27"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "range" : "5",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "30"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "31"
+  }, {
+    "range" : "11",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "11",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "11",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "range" : "11",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/hasShardDurationClause",
+    "inverse" : "13",
+    "baseIri" : "https://w3id.org",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasShardDurationClause",
+      "en" : "has shard duration clause"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "2",
+    "attributes" : [ "object", "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/hasTagKey",
+    "inverse" : "21",
+    "baseIri" : "https://w3id.org",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasTagKey",
+      "en" : "has tag key"
+    },
+    "domain" : "16",
+    "attributes" : [ "object", "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/isDateFormatOf",
+    "baseIri" : "https://w3id.org",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "isDateFormatOf",
+      "en" : "is date format of"
+    },
+    "domain" : "11",
+    "attributes" : [ "object", "inverse functional", "external" ],
+    "id" : "28"
+  }, {
+    "range" : "2",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "range" : "5",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://w3id.org/hasFieldKey",
+    "inverse" : "43",
+    "baseIri" : "https://w3id.org",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasFieldKey",
+      "en" : "has field key"
+    },
+    "domain" : "16",
+    "attributes" : [ "object", "external" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/hasDefaultRetentionPolicy",
+    "inverse" : "17",
+    "baseIri" : "https://w3id.org",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasDefaultRetentionPolicy",
+      "en" : "has default retention policy"
+    },
+    "superproperty" : [ "19" ],
+    "domain" : "16",
+    "attributes" : [ "object", "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/refersToFieldKey",
+    "inverse" : "7",
+    "baseIri" : "https://w3id.org",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "refersToFieldKey",
+      "en" : "refers to field key"
+    },
+    "domain" : "9",
+    "attributes" : [ "object", "inverse functional", "external" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/isDefaultRetentionPolicyOf",
+    "baseIri" : "https://w3id.org",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "isDefaultRetentionPolicyOf",
+      "en" : "is default retention policy of"
+    },
+    "superproperty" : [ "15" ],
+    "domain" : "6",
+    "attributes" : [ "object", "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/hasDurationClause",
+    "inverse" : "14",
+    "baseIri" : "https://w3id.org",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasDurationClause",
+      "en" : "has duration clause"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "2",
+    "attributes" : [ "object", "external" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/isFieldKeyOf",
+    "baseIri" : "https://w3id.org",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "isFieldKeyOf",
+      "en" : "is field key of"
+    },
+    "domain" : "8",
+    "attributes" : [ "object", "external" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://w3id.org/isShardDurationClauseOf",
+    "baseIri" : "https://w3id.org",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "isShardDurationClauseOf",
+      "en" : "is shard duration clause of"
+    },
+    "superproperty" : [ "3" ],
+    "domain" : "4",
+    "attributes" : [ "object", "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/hasReplicationClause",
+    "inverse" : "0",
+    "baseIri" : "https://w3id.org",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasReplicationClause",
+      "en" : "has replication clause"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "2",
+    "attributes" : [ "object", "external" ],
+    "id" : "26"
+  } ]
+}

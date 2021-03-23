@@ -1,0 +1,1154 @@
+<h2 id="crossreference" class="list">Cross reference for BOP Database Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by BOP Database Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/Clause" title="http://alexdonkers.github.io/bopdb/Clause">Clause</a>
+      </li>
+      <li>
+         <a href="#/DateFormat" title="http://alexdonkers.github.io/bopdb/DateFormat">Date format</a>
+      </li>
+      <li>
+         <a href="#/DefaultRetentionPolicy"
+            title="http://alexdonkers.github.io/bopdb/DefaultRetentionPolicy">Default retention policy</a>
+      </li>
+      <li>
+         <a href="#/DurationClause"
+            title="http://alexdonkers.github.io/bopdb/DurationClause">Duration clause</a>
+      </li>
+      <li>
+         <a href="#/FieldKey" title="http://alexdonkers.github.io/bopdb/FieldKey">Field key</a>
+      </li>
+      <li>
+         <a href="#/ReplicationClause"
+            title="http://alexdonkers.github.io/bopdb/ReplicationClause">Replication clause</a>
+      </li>
+      <li>
+         <a href="#/RetentionPolicy"
+            title="http://alexdonkers.github.io/bopdb/RetentionPolicy">Retention policy</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/RFC3339" title="https://w3id.org/RFC3339">RFC3339 timestamp</a>
+      </li>
+      <li>
+         <a href="#/ShardDurationClause"
+            title="http://alexdonkers.github.io/bopdb/ShardDurationClause">Shard duration clause</a>
+      </li>
+      <li>
+         <a href="#/TagKey" title="http://alexdonkers.github.io/bopdb/TagKey">Tag key</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/Unix-us" title="https://w3id.org/Unix-us">Unix microsecond epoch timestamp</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/Unix-ms" title="https://w3id.org/Unix-ms">Unix millisecond epoch timestamp</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/Unix-ns" title="https://w3id.org/Unix-ns">Unix nanosecond epoch timestamp</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/Unix-s" title="https://w3id.org/Unix-s">Unix second epoch timestamp</a>
+      </li>
+   </ul>
+   <div class="entity" id="/Clause">
+      <h3>Clause<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://alexdonkers.github.io/bopdb/Clause</p>
+      <div class="comment">
+         <span class="markdown">An attribute of the retention policy that specifies information on how data in the database is stored.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/DurationClause"
+               title="http://alexdonkers.github.io/bopdb/DurationClause">Duration clause</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/ReplicationClause"
+               title="http://alexdonkers.github.io/bopdb/ReplicationClause">Replication clause</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/ShardDurationClause"
+               title="http://alexdonkers.github.io/bopdb/ShardDurationClause">Shard duration clause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/isClauseOf" title="https://w3id.org/isClauseOf">is clause of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/hasClause" title="https://w3id.org/hasClause">has clause</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/DateFormat">
+      <h3>Date format<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://alexdonkers.github.io/bopdb/DateFormat</p>
+      <div class="comment">
+         <span class="markdown">The format of the data and time associated with a point.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/RFC3339" title="https://w3id.org/RFC3339">RFC3339 timestamp</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/Unix-us" title="https://w3id.org/Unix-us">Unix microsecond epoch timestamp</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/Unix-ms" title="https://w3id.org/Unix-ms">Unix millisecond epoch timestamp</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/Unix-ns" title="https://w3id.org/Unix-ns">Unix nanosecond epoch timestamp</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/Unix-s" title="https://w3id.org/Unix-s">Unix second epoch timestamp</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/isDateFormatOf" title="https://w3id.org/isDateFormatOf">is date format of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/hasDateFormat" title="https://w3id.org/hasDateFormat">has date format</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/DefaultRetentionPolicy">
+      <h3>Default retention policy<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://alexdonkers.github.io/bopdb/DefaultRetentionPolicy</p>
+      <div class="comment">
+         <span class="markdown">Default retention policy of the database.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/RetentionPolicy"
+               title="http://alexdonkers.github.io/bopdb/RetentionPolicy">Retention policy</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/isDefaultRetentionPolicyOf" title="https://w3id.org/isDefaultRetentionPolicyOf">is default retention policy of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/hasDefaultRetentionPolicy" title="https://w3id.org/hasDefaultRetentionPolicy">has default retention policy</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/DurationClause">
+      <h3>Duration clause<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://alexdonkers.github.io/bopdb/DurationClause</p>
+      <div class="comment">
+         <span class="markdown">The attribute of the retention policy that determines how long InfluxDB stores data. Data older than the duration are automatically dropped from the database.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Clause" title="http://alexdonkers.github.io/bopdb/Clause">Clause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/isDurationClauseOf" title="https://w3id.org/isDurationClauseOf">is duration clause of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/hasDurationClause" title="https://w3id.org/hasDurationClause">has duration clause</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/FieldKey">
+      <h3>Field key<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://alexdonkers.github.io/bopdb/FieldKey</p>
+      <div class="comment">
+         <span class="markdown">The key of the key-value pair. Field keys are strings and they store metadata.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/isFieldKeyOf" title="https://w3id.org/isFieldKeyOf">is field key of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/refersToProperty" title="https://w3id.org/refersToProperty">refers to property</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/hasFieldKey" title="https://w3id.org/hasFieldKey">has field key</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/refersToFieldKey" title="https://w3id.org/refersToFieldKey">refers to field key</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ReplicationClause">
+      <h3>Replication clause<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://alexdonkers.github.io/bopdb/ReplicationClause</p>
+      <div class="comment">
+         <span class="markdown">The attribute of the retention policy that determines how many copies of data to concurrently store (or retain) in the cluster. Replicating copies ensures that data is available when a data node (or more) is unavailable.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Clause" title="http://alexdonkers.github.io/bopdb/Clause">Clause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/isReplicationClauseOf" title="https://w3id.org/isReplicationClauseOf">is replication clause of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/hasReplicationClause" title="https://w3id.org/hasReplicationClause">has replication clause</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/RetentionPolicy">
+      <h3>Retention policy<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://alexdonkers.github.io/bopdb/RetentionPolicy</p>
+      <div class="comment">
+         <span class="markdown">Describes how long InfluxDB keeps data (duration), how many copies of the data to store in the cluster (replication factor), and the time range covered by shard groups (shard group duration). RPs are unique per database and along with the measurement and tag set define a series.
+
+When you create a database, InfluxDB creates a retention policy called autogen with an infinite duration, a replication factor set to one, and a shard group duration set to seven days.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/DefaultRetentionPolicy"
+               title="http://alexdonkers.github.io/bopdb/DefaultRetentionPolicy">Default retention policy</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/hasClause" title="https://w3id.org/hasClause">has clause</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/hasDurationClause" title="https://w3id.org/hasDurationClause">has duration clause</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/hasReplicationClause" title="https://w3id.org/hasReplicationClause">has replication clause</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/hasShardDurationClause" title="https://w3id.org/hasShardDurationClause">has shard duration clause</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/isRetentionPolicyOf" title="https://w3id.org/isRetentionPolicyOf">is retention policy of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/hasRetentionPolicy" title="https://w3id.org/hasRetentionPolicy">has retention policy</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/isClauseOf" title="https://w3id.org/isClauseOf">is clause of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/isDurationClauseOf" title="https://w3id.org/isDurationClauseOf">is duration clause of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/isReplicationClauseOf" title="https://w3id.org/isReplicationClauseOf">is replication clause of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/isShardDurationClauseOf" title="https://w3id.org/isShardDurationClauseOf">is shard duration clause of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/RFC3339">
+      <h3>RFC3339 timestamp<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/RFC3339</p>
+      <div class="comment">
+         <span class="markdown">A timestamp that uses the human readable DateTime format proposed in RFC 3339 (for example: 2020-01-01T00:00:00.00Z). Flux and InfluxDB clients return query results with RFC3339 timestamps.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/DateFormat" title="http://alexdonkers.github.io/bopdb/DateFormat">Date format</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ShardDurationClause">
+      <h3>Shard duration clause<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://alexdonkers.github.io/bopdb/ShardDurationClause</p>
+      <div class="comment">
+         <span class="markdown">The shard duration determines how much time each shard group spans.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Clause" title="http://alexdonkers.github.io/bopdb/Clause">Clause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/isShardDurationClauseOf" title="https://w3id.org/isShardDurationClauseOf">is shard duration clause of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/hasShardDurationClause" title="https://w3id.org/hasShardDurationClause">has shard duration clause</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TagKey">
+      <h3>Tag key<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://alexdonkers.github.io/bopdb/TagKey</p>
+      <div class="comment">
+         <span class="markdown">The key of a tag key-value pair. Tag keys are strings and store metadata. Tag keys are indexed so queries on tag keys are processed quickly.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/isTagKeyOf" title="https://w3id.org/isTagKeyOf">is tag key of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/hasTagKey" title="https://w3id.org/hasTagKey">has tag key</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/Unix-us">
+      <h3>Unix microsecond epoch timestamp<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/Unix-us</p>
+      <div class="comment">
+         <span class="markdown">Counts time since Unix Epoch (1970-01-01T00:00:00Z UTC) in specified units (microseconds).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/DateFormat" title="http://alexdonkers.github.io/bopdb/DateFormat">Date format</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/Unix-ms">
+      <h3>Unix millisecond epoch timestamp<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/Unix-ms</p>
+      <div class="comment">
+         <span class="markdown">Counts time since Unix Epoch (1970-01-01T00:00:00Z UTC) in specified units (milliseconds).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/DateFormat" title="http://alexdonkers.github.io/bopdb/DateFormat">Date format</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/Unix-ns">
+      <h3>Unix nanosecond epoch timestamp<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/Unix-ns</p>
+      <div class="comment">
+         <span class="markdown">Counts time since Unix Epoch (1970-01-01T00:00:00Z UTC) in specified units (nanoseconds).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/DateFormat" title="http://alexdonkers.github.io/bopdb/DateFormat">Date format</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/Unix-s">
+      <h3>Unix second epoch timestamp<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/Unix-s</p>
+      <div class="comment">
+         <span class="markdown">Counts time since Unix Epoch (1970-01-01T00:00:00Z UTC) in specified units (seconds).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/DateFormat" title="http://alexdonkers.github.io/bopdb/DateFormat">Date format</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/hasClause" title="https://w3id.org/hasClause">has clause</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/hasDateFormat" title="https://w3id.org/hasDateFormat">has date format</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/hasDefaultRetentionPolicy" title="https://w3id.org/hasDefaultRetentionPolicy">has default retention policy</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/hasDurationClause" title="https://w3id.org/hasDurationClause">has duration clause</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/hasFieldKey" title="https://w3id.org/hasFieldKey">has field key</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/hasReplicationClause" title="https://w3id.org/hasReplicationClause">has replication clause</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/hasRetentionPolicy" title="https://w3id.org/hasRetentionPolicy">has retention policy</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/hasShardDurationClause" title="https://w3id.org/hasShardDurationClause">has shard duration clause</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/hasTagKey" title="https://w3id.org/hasTagKey">has tag key</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/isClauseOf" title="https://w3id.org/isClauseOf">is clause of</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/isDateFormatOf" title="https://w3id.org/isDateFormatOf">is date format of</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/isDefaultRetentionPolicyOf" title="https://w3id.org/isDefaultRetentionPolicyOf">is default retention policy of</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/isDurationClauseOf" title="https://w3id.org/isDurationClauseOf">is duration clause of</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/isFieldKeyOf" title="https://w3id.org/isFieldKeyOf">is field key of</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/isReplicationClauseOf" title="https://w3id.org/isReplicationClauseOf">is replication clause of</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/isRetentionPolicyOf" title="https://w3id.org/isRetentionPolicyOf">is retention policy of</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/isShardDurationClauseOf" title="https://w3id.org/isShardDurationClauseOf">is shard duration clause of</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/isTagKeyOf" title="https://w3id.org/isTagKeyOf">is tag key of</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/refersToFieldKey" title="https://w3id.org/refersToFieldKey">refers to field key</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/refersToProperty" title="https://w3id.org/refersToProperty">refers to property</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/hasClause">
+      <h3>has clause<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/hasClause</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/hasDurationClause" title="https://w3id.org/hasDurationClause">has duration clause</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/hasReplicationClause" title="https://w3id.org/hasReplicationClause">has replication clause</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/hasShardDurationClause" title="https://w3id.org/hasShardDurationClause">has shard duration clause</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/RetentionPolicy"
+                  title="http://alexdonkers.github.io/bopdb/RetentionPolicy">Retention policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Clause" title="http://alexdonkers.github.io/bopdb/Clause">Clause</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/isClauseOf" title="https://w3id.org/isClauseOf">is clause of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/hasDateFormat">
+      <h3>has date format<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/hasDateFormat</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://w3id.org/Database"
+                  target="_blank"
+                  title="https://w3id.org/Database">database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/DateFormat" title="http://alexdonkers.github.io/bopdb/DateFormat">Date format</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/isDateFormatOf" title="https://w3id.org/isDateFormatOf">is date format of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/hasDefaultRetentionPolicy">
+      <h3>has default retention policy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/hasDefaultRetentionPolicy</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/hasRetentionPolicy" title="https://w3id.org/hasRetentionPolicy">has retention policy</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://w3id.org/Database"
+                  target="_blank"
+                  title="https://w3id.org/Database">database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/DefaultRetentionPolicy"
+                  title="http://alexdonkers.github.io/bopdb/DefaultRetentionPolicy">Default retention policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/isDefaultRetentionPolicyOf" title="https://w3id.org/isDefaultRetentionPolicyOf">is default retention policy of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/hasDurationClause">
+      <h3>has duration clause<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/hasDurationClause</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/hasClause" title="https://w3id.org/hasClause">has clause</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/RetentionPolicy"
+                  title="http://alexdonkers.github.io/bopdb/RetentionPolicy">Retention policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/DurationClause"
+                  title="http://alexdonkers.github.io/bopdb/DurationClause">Duration clause</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/isDurationClauseOf" title="https://w3id.org/isDurationClauseOf">is duration clause of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/hasFieldKey">
+      <h3>has field key<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/hasFieldKey</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://w3id.org/Database"
+                  target="_blank"
+                  title="https://w3id.org/Database">database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/FieldKey" title="http://alexdonkers.github.io/bopdb/FieldKey">Field key</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/isFieldKeyOf" title="https://w3id.org/isFieldKeyOf">is field key of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/hasReplicationClause">
+      <h3>has replication clause<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/hasReplicationClause</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/hasClause" title="https://w3id.org/hasClause">has clause</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/RetentionPolicy"
+                  title="http://alexdonkers.github.io/bopdb/RetentionPolicy">Retention policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/ReplicationClause"
+                  title="http://alexdonkers.github.io/bopdb/ReplicationClause">Replication clause</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/isReplicationClauseOf" title="https://w3id.org/isReplicationClauseOf">is replication clause of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/hasRetentionPolicy">
+      <h3>has retention policy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/hasRetentionPolicy</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/hasDefaultRetentionPolicy" title="https://w3id.org/hasDefaultRetentionPolicy">has default retention policy</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://w3id.org/Database"
+                  target="_blank"
+                  title="https://w3id.org/Database">database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/RetentionPolicy"
+                  title="http://alexdonkers.github.io/bopdb/RetentionPolicy">Retention policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/isRetentionPolicyOf" title="https://w3id.org/isRetentionPolicyOf">is retention policy of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/hasShardDurationClause">
+      <h3>has shard duration clause<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/hasShardDurationClause</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/hasClause" title="https://w3id.org/hasClause">has clause</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/RetentionPolicy"
+                  title="http://alexdonkers.github.io/bopdb/RetentionPolicy">Retention policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/ShardDurationClause"
+                  title="http://alexdonkers.github.io/bopdb/ShardDurationClause">Shard duration clause</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/isShardDurationClauseOf" title="https://w3id.org/isShardDurationClauseOf">is shard duration clause of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/hasTagKey">
+      <h3>has tag key<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/hasTagKey</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://w3id.org/Database"
+                  target="_blank"
+                  title="https://w3id.org/Database">database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/TagKey" title="http://alexdonkers.github.io/bopdb/TagKey">Tag key</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/isTagKeyOf" title="https://w3id.org/isTagKeyOf">is tag key of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/isClauseOf">
+      <h3>is clause of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/isClauseOf</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/isDurationClauseOf" title="https://w3id.org/isDurationClauseOf">is duration clause of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/isReplicationClauseOf" title="https://w3id.org/isReplicationClauseOf">is replication clause of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/isShardDurationClauseOf" title="https://w3id.org/isShardDurationClauseOf">is shard duration clause of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Clause" title="http://alexdonkers.github.io/bopdb/Clause">Clause</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/RetentionPolicy"
+                  title="http://alexdonkers.github.io/bopdb/RetentionPolicy">Retention policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/hasClause" title="https://w3id.org/hasClause">has clause</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/isDateFormatOf">
+      <h3>is date format of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/isDateFormatOf</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> inverse functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/DateFormat" title="http://alexdonkers.github.io/bopdb/DateFormat">Date format</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/Database"
+                  target="_blank"
+                  title="https://w3id.org/Database">database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/hasDateFormat" title="https://w3id.org/hasDateFormat">has date format</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/isDefaultRetentionPolicyOf">
+      <h3>is default retention policy of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/isDefaultRetentionPolicyOf</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/isRetentionPolicyOf" title="https://w3id.org/isRetentionPolicyOf">is retention policy of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/DefaultRetentionPolicy"
+                  title="http://alexdonkers.github.io/bopdb/DefaultRetentionPolicy">Default retention policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/Database"
+                  target="_blank"
+                  title="https://w3id.org/Database">database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/hasDefaultRetentionPolicy" title="https://w3id.org/hasDefaultRetentionPolicy">has default retention policy</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/isDurationClauseOf">
+      <h3>is duration clause of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/isDurationClauseOf</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/isClauseOf" title="https://w3id.org/isClauseOf">is clause of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/DurationClause"
+                  title="http://alexdonkers.github.io/bopdb/DurationClause">Duration clause</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/RetentionPolicy"
+                  title="http://alexdonkers.github.io/bopdb/RetentionPolicy">Retention policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/hasDurationClause" title="https://w3id.org/hasDurationClause">has duration clause</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/isFieldKeyOf">
+      <h3>is field key of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/isFieldKeyOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/FieldKey" title="http://alexdonkers.github.io/bopdb/FieldKey">Field key</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/Database"
+                  target="_blank"
+                  title="https://w3id.org/Database">database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/hasFieldKey" title="https://w3id.org/hasFieldKey">has field key</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/isReplicationClauseOf">
+      <h3>is replication clause of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/isReplicationClauseOf</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/isClauseOf" title="https://w3id.org/isClauseOf">is clause of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/ReplicationClause"
+                  title="http://alexdonkers.github.io/bopdb/ReplicationClause">Replication clause</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/RetentionPolicy"
+                  title="http://alexdonkers.github.io/bopdb/RetentionPolicy">Retention policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/hasReplicationClause" title="https://w3id.org/hasReplicationClause">has replication clause</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/isRetentionPolicyOf">
+      <h3>is retention policy of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/isRetentionPolicyOf</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/isDefaultRetentionPolicyOf" title="https://w3id.org/isDefaultRetentionPolicyOf">is default retention policy of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/RetentionPolicy"
+                  title="http://alexdonkers.github.io/bopdb/RetentionPolicy">Retention policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/Database"
+                  target="_blank"
+                  title="https://w3id.org/Database">database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/hasRetentionPolicy" title="https://w3id.org/hasRetentionPolicy">has retention policy</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/isShardDurationClauseOf">
+      <h3>is shard duration clause of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/isShardDurationClauseOf</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/isClauseOf" title="https://w3id.org/isClauseOf">is clause of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/ShardDurationClause"
+                  title="http://alexdonkers.github.io/bopdb/ShardDurationClause">Shard duration clause</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/RetentionPolicy"
+                  title="http://alexdonkers.github.io/bopdb/RetentionPolicy">Retention policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/hasShardDurationClause" title="https://w3id.org/hasShardDurationClause">has shard duration clause</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/isTagKeyOf">
+      <h3>is tag key of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/isTagKeyOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/TagKey" title="http://alexdonkers.github.io/bopdb/TagKey">Tag key</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/Database"
+                  target="_blank"
+                  title="https://w3id.org/Database">database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/hasTagKey" title="https://w3id.org/hasTagKey">has tag key</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/refersToFieldKey">
+      <h3>refers to field key<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/refersToFieldKey</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> inverse functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://w3id.org/Property"
+                  target="_blank"
+                  title="https://w3id.org/Property">property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/FieldKey" title="http://alexdonkers.github.io/bopdb/FieldKey">Field key</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/refersToProperty" title="https://w3id.org/refersToProperty">refers to property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/refersToProperty">
+      <h3>refers to property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/refersToProperty</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/FieldKey" title="http://alexdonkers.github.io/bopdb/FieldKey">Field key</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/Property"
+                  target="_blank"
+                  title="https://w3id.org/Property">property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/refersToFieldKey" title="https://w3id.org/refersToFieldKey">refers to field key</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://orcid.org/0000-0002-8809-3277" title="https://orcid.org/0000-0002-8809-3277">Alex Donkers</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://orcid.org/0000-0002-8809-3277">
+      <h3>Alex Donkers<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://orcid.org/0000-0002-8809-3277</p>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
