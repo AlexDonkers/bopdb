@@ -1,0 +1,496 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://alexdonkers.github.io/bopdb#"
+     xml:base="http://alexdonkers.github.io/bopdb"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://alexdonkers.github.io/bopdb">
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-8809-3277"/>
+        <terms:description xml:lang="en">This ontology is an extension of the Building Performance Ontology (BOP). It describes detailed database information. The ontology helps to create database alignment modules and enables the description of database schemas, retention policies and data formats.</terms:description>
+        <terms:title xml:lang="en">BOP Database Ontology</terms:title>
+        <vann:preferredNameSpacePrefix>bopdb</vann:preferredNameSpacePrefix>
+        <vann:preferredNameSpaceUri rdf:resource="http://alexdonkers.github.io/bopdb#"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/alternative -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/alternative"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNameSpacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNameSpacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNameSpaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNameSpaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/hasClause -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hasClause">
+        <owl:inverseOf rdf:resource="https://w3id.org/isClauseOf"/>
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/RetentionPolicy"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/Clause"/>
+        <rdfs:label xml:lang="en">has clause</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hasDateFormat -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hasDateFormat">
+        <owl:inverseOf rdf:resource="https://w3id.org/isDateFormatOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/Database"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/DateFormat"/>
+        <rdfs:label xml:lang="en">has date format</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hasDefaultRetentionPolicy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hasDefaultRetentionPolicy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/hasRetentionPolicy"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/isDefaultRetentionPolicyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/Database"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/DefaultRetentionPolicy"/>
+        <rdfs:label xml:lang="en">has default retention policy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hasDurationClause -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hasDurationClause">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/hasClause"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/isDurationClauseOf"/>
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/RetentionPolicy"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/DurationClause"/>
+        <rdfs:label xml:lang="en">has duration clause</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hasFieldKey -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hasFieldKey">
+        <owl:inverseOf rdf:resource="https://w3id.org/isFieldKeyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/Database"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/FieldKey"/>
+        <rdfs:label xml:lang="en">has field key</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hasReplicationClause -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hasReplicationClause">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/hasClause"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/isReplicationClauseOf"/>
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/RetentionPolicy"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/ReplicationClause"/>
+        <rdfs:label xml:lang="en">has replication clause</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hasRetentionPolicy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hasRetentionPolicy">
+        <owl:inverseOf rdf:resource="https://w3id.org/isRetentionPolicyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/Database"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/RetentionPolicy"/>
+        <rdfs:label xml:lang="en">has retention policy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hasShardDurationClause -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hasShardDurationClause">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/hasClause"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/isShardDurationClauseOf"/>
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/RetentionPolicy"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/ShardDurationClause"/>
+        <rdfs:label xml:lang="en">has shard duration clause</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hasTagKey -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hasTagKey">
+        <owl:inverseOf rdf:resource="https://w3id.org/isTagKeyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/Database"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/TagKey"/>
+        <rdfs:label xml:lang="en">has tag key</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/isClauseOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/isClauseOf">
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/Clause"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/RetentionPolicy"/>
+        <rdfs:label xml:lang="en">is clause of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/isDateFormatOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/isDateFormatOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/DateFormat"/>
+        <rdfs:range rdf:resource="https://w3id.org/Database"/>
+        <rdfs:label xml:lang="en">is date format of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/isDefaultRetentionPolicyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/isDefaultRetentionPolicyOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isRetentionPolicyOf"/>
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/DefaultRetentionPolicy"/>
+        <rdfs:range rdf:resource="https://w3id.org/Database"/>
+        <rdfs:label xml:lang="en">is default retention policy of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/isDurationClauseOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/isDurationClauseOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isClauseOf"/>
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/DurationClause"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/RetentionPolicy"/>
+        <rdfs:label xml:lang="en">is duration clause of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/isFieldKeyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/isFieldKeyOf">
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/FieldKey"/>
+        <rdfs:range rdf:resource="https://w3id.org/Database"/>
+        <rdfs:label xml:lang="en">is field key of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/isReplicationClauseOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/isReplicationClauseOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isClauseOf"/>
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/ReplicationClause"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/RetentionPolicy"/>
+        <rdfs:label xml:lang="en">is replication clause of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/isRetentionPolicyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/isRetentionPolicyOf">
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/RetentionPolicy"/>
+        <rdfs:range rdf:resource="https://w3id.org/Database"/>
+        <rdfs:label xml:lang="en">is retention policy of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/isShardDurationClauseOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/isShardDurationClauseOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isClauseOf"/>
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/ShardDurationClause"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/RetentionPolicy"/>
+        <rdfs:label xml:lang="en">is shard duration clause of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/isTagKeyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/isTagKeyOf">
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/TagKey"/>
+        <rdfs:range rdf:resource="https://w3id.org/Database"/>
+        <rdfs:label xml:lang="en">is tag key of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/refersToFieldKey -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/refersToFieldKey">
+        <owl:inverseOf rdf:resource="https://w3id.org/refersToProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/Property"/>
+        <rdfs:range rdf:resource="http://alexdonkers.github.io/bopdb/FieldKey"/>
+        <rdfs:label xml:lang="en">refers to field key</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/refersToProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/refersToProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://alexdonkers.github.io/bopdb/FieldKey"/>
+        <rdfs:range rdf:resource="https://w3id.org/Property"/>
+        <rdfs:label xml:lang="en">refers to property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://alexdonkers.github.io/bopdb/Clause -->
+
+    <owl:Class rdf:about="http://alexdonkers.github.io/bopdb/Clause">
+        <rdfs:comment xml:lang="en">An attribute of the retention policy that specifies information on how data in the database is stored.</rdfs:comment>
+        <rdfs:label xml:lang="en">Clause</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://alexdonkers.github.io/bopdb/DateFormat -->
+
+    <owl:Class rdf:about="http://alexdonkers.github.io/bopdb/DateFormat">
+        <rdfs:comment xml:lang="en">The format of the data and time associated with a point.</rdfs:comment>
+        <rdfs:label xml:lang="en">Date format</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://alexdonkers.github.io/bopdb/DefaultRetentionPolicy -->
+
+    <owl:Class rdf:about="http://alexdonkers.github.io/bopdb/DefaultRetentionPolicy">
+        <rdfs:subClassOf rdf:resource="http://alexdonkers.github.io/bopdb/RetentionPolicy"/>
+        <rdfs:comment xml:lang="en">Default retention policy of the database.</rdfs:comment>
+        <rdfs:label xml:lang="en">Default retention policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://alexdonkers.github.io/bopdb/DurationClause -->
+
+    <owl:Class rdf:about="http://alexdonkers.github.io/bopdb/DurationClause">
+        <rdfs:subClassOf rdf:resource="http://alexdonkers.github.io/bopdb/Clause"/>
+        <rdfs:comment xml:lang="en">The attribute of the retention policy that determines how long InfluxDB stores data. Data older than the duration are automatically dropped from the database.</rdfs:comment>
+        <rdfs:label xml:lang="en">Duration clause</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://alexdonkers.github.io/bopdb/FieldKey -->
+
+    <owl:Class rdf:about="http://alexdonkers.github.io/bopdb/FieldKey">
+        <rdfs:comment xml:lang="en">The key of the key-value pair. Field keys are strings and they store metadata.</rdfs:comment>
+        <rdfs:label xml:lang="en">Field key</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://alexdonkers.github.io/bopdb/ReplicationClause -->
+
+    <owl:Class rdf:about="http://alexdonkers.github.io/bopdb/ReplicationClause">
+        <rdfs:subClassOf rdf:resource="http://alexdonkers.github.io/bopdb/Clause"/>
+        <rdfs:comment xml:lang="en">The attribute of the retention policy that determines how many copies of data to concurrently store (or retain) in the cluster. Replicating copies ensures that data is available when a data node (or more) is unavailable.</rdfs:comment>
+        <rdfs:label xml:lang="en">Replication clause</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://alexdonkers.github.io/bopdb/RetentionPolicy -->
+
+    <owl:Class rdf:about="http://alexdonkers.github.io/bopdb/RetentionPolicy">
+        <rdfs:comment xml:lang="en">Describes how long InfluxDB keeps data (duration), how many copies of the data to store in the cluster (replication factor), and the time range covered by shard groups (shard group duration). RPs are unique per database and along with the measurement and tag set define a series.
+
+When you create a database, InfluxDB creates a retention policy called autogen with an infinite duration, a replication factor set to one, and a shard group duration set to seven days.</rdfs:comment>
+        <rdfs:label xml:lang="en">Retention policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://alexdonkers.github.io/bopdb/ShardDurationClause -->
+
+    <owl:Class rdf:about="http://alexdonkers.github.io/bopdb/ShardDurationClause">
+        <rdfs:subClassOf rdf:resource="http://alexdonkers.github.io/bopdb/Clause"/>
+        <rdfs:comment xml:lang="en">The shard duration determines how much time each shard group spans.</rdfs:comment>
+        <rdfs:label xml:lang="en">Shard duration clause</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://alexdonkers.github.io/bopdb/TagKey -->
+
+    <owl:Class rdf:about="http://alexdonkers.github.io/bopdb/TagKey">
+        <rdfs:comment xml:lang="en">The key of a tag key-value pair. Tag keys are strings and store metadata. Tag keys are indexed so queries on tag keys are processed quickly.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tag key</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/Database -->
+
+    <owl:Class rdf:about="https://w3id.org/Database"/>
+    
+
+
+    <!-- https://w3id.org/Property -->
+
+    <owl:Class rdf:about="https://w3id.org/Property"/>
+    
+
+
+    <!-- https://w3id.org/RFC3339 -->
+
+    <owl:Class rdf:about="https://w3id.org/RFC3339">
+        <rdfs:subClassOf rdf:resource="http://alexdonkers.github.io/bopdb/DateFormat"/>
+        <terms:alternative xml:lang="en">YYYY-MM-DDThh:mm:ss.ssZ</terms:alternative>
+        <rdfs:comment xml:lang="en">A timestamp that uses the human readable DateTime format proposed in RFC 3339 (for example: 2020-01-01T00:00:00.00Z). Flux and InfluxDB clients return query results with RFC3339 timestamps.</rdfs:comment>
+        <rdfs:label xml:lang="en">RFC3339 timestamp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/Unix-ms -->
+
+    <owl:Class rdf:about="https://w3id.org/Unix-ms">
+        <rdfs:subClassOf rdf:resource="http://alexdonkers.github.io/bopdb/DateFormat"/>
+        <rdfs:comment xml:lang="en">Counts time since Unix Epoch (1970-01-01T00:00:00Z UTC) in specified units (milliseconds).</rdfs:comment>
+        <rdfs:label xml:lang="en">Unix millisecond epoch timestamp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/Unix-ns -->
+
+    <owl:Class rdf:about="https://w3id.org/Unix-ns">
+        <rdfs:subClassOf rdf:resource="http://alexdonkers.github.io/bopdb/DateFormat"/>
+        <rdfs:comment xml:lang="en">Counts time since Unix Epoch (1970-01-01T00:00:00Z UTC) in specified units (nanoseconds).</rdfs:comment>
+        <rdfs:label xml:lang="en">Unix nanosecond epoch timestamp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/Unix-s -->
+
+    <owl:Class rdf:about="https://w3id.org/Unix-s">
+        <rdfs:subClassOf rdf:resource="http://alexdonkers.github.io/bopdb/DateFormat"/>
+        <rdfs:comment xml:lang="en">Counts time since Unix Epoch (1970-01-01T00:00:00Z UTC) in specified units (seconds).</rdfs:comment>
+        <rdfs:label xml:lang="en">Unix second epoch timestamp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/Unix-us -->
+
+    <owl:Class rdf:about="https://w3id.org/Unix-us">
+        <rdfs:subClassOf rdf:resource="http://alexdonkers.github.io/bopdb/DateFormat"/>
+        <rdfs:comment xml:lang="en">Counts time since Unix Epoch (1970-01-01T00:00:00Z UTC) in specified units (microseconds).</rdfs:comment>
+        <rdfs:label xml:lang="en">Unix microsecond epoch timestamp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://alexdonkers.github.io/bopdb# -->
+
+    <owl:NamedIndividual rdf:about="http://alexdonkers.github.io/bopdb#"/>
+    
+
+
+    <!-- https://orcid.org/0000-0002-8809-3277 -->
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-8809-3277">
+        <rdfs:label>Alex Donkers</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
