@@ -1,13 +1,16 @@
 <h2 id="desc" class="list">BOP Database Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</p>
+The BOP Database Ontology is designed based on the latest version of <a href="https://docs.influxdata.com/influxdb/v2.0/">InfluxDB (v2.0)</a> and covers the key concepts of InfluxDB data elements. Due to the stability of InfluxDB developments, the ontology could also be used to describe previous versions of InfluxDB. Concepts in BOPDB match with the InfluxDB concepts of v1.3 and later.  
 
-		<!-- Generic structure -->
+Figure 1 shows the structure of the ontology. It also shows how the ontology could extend <a href="https://w3id.org/bop">BOP</a> by including <a href="https://w3id.org/bop#Property">bop:Property</a> and <a href="https://w3id.org/bop#Database">bop:Database</a> in the schema. Field keys are in practice used to describe properties of the measurement and therefore relate to a <a href="https://w3id.org/bop#Property">bop:Property</a>. Tag keys are used to describe additional metadata, such as the location of the measurement or the researcher making the measurement, and could therefore be linked to a wide range of instances. Some date formats have been added as subclasses of <a href="https://alexdonkers.github.io/bopdb#DateFormat">bopdb:DateFormat</a>. However, this list is incomplete by definition. It is likely to be extended in the near future. For additions, please contact <a href="mailto:a.j.a.donkers@tue.nl">Alex Donkers</a>.
+</p>
 
-		<h4 id="genericstructure" class="list">Generic structure</h4>
-		<div id="fig1" align="center">
-			<a href="https://raw.githubusercontent.com/AlexDonkers/bopdb/main/docs/resources/Generic_Structure_bopdb.png" target="_blank">
-				<img src="https://raw.githubusercontent.com/AlexDonkers/bop/main/docs/resources/Generic_Structure_bopdb_webpage.png" style="max-width: 100%; display: block; margin: auto">
-			</a>
-			<a href="#fig1"> Figure 1</a>: Generic structure of BOPDB 
-		</div>
+<!-- Generic structure -->
+
+<h4 id="genericstructure" class="list">Generic structure</h4>
+<div id="fig1" align="center">
+	<a href="https://raw.githubusercontent.com/AlexDonkers/bopdb/main/docs/resources/Generic_Structure_bopdb.png" target="_blank">
+		<img src="https://raw.githubusercontent.com/AlexDonkers/bopdb/main/docs/resources/Generic_Structure_bopdb_webpage.png" style="max-width: 100%; display: block; margin: auto">
+	</a>
+	<a href="#fig1"> Figure 1</a>: Generic structure of BOPDB 
+</div>
